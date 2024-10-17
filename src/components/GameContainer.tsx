@@ -7,13 +7,15 @@ import { useGame } from "../context/GameContext";
 
 // wrap all the main game logic and manage the state
 const GameContainer = () => {
-  const { score, currentQuote, quoters, handleSelectQuoter } = useGame();
+  const { score, currentQuote, quotersList } = useGame();
+
+  console.log("curr quote", currentQuote);
 
   return (
     <div className="game_container">
       <GameHeader title="Quote Quest" score={score} />
-      <QuoteDisplay quote={currentQuote} />
-      <QuoterList quoters={quoters} handleSelectQuoter={handleSelectQuoter} />
+      <QuoteDisplay currentQuote={currentQuote} />
+      <QuoterList quoters={quotersList} />
       <GameFooter />
     </div>
   );

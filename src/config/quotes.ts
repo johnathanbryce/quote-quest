@@ -1,11 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-
-export type Quote = {
-  id: string;
-  quote: string;
-  author: string;
-  isReal: boolean;
-};
+import { Quote } from "../types/quotes";
 
 export const quotes: Quote[] = [
   // Donald Trump Quotes
