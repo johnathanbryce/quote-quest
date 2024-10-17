@@ -1,0 +1,19 @@
+.main_layout {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  border: 0.1rem solid red;
+}
+
+.content_layout {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  border: 0.1rem solid blue;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
