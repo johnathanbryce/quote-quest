@@ -1,7 +1,12 @@
-import React from "react";
+import { GameProvider } from "../context/GameContext";
+import GameContainer from "../components/GameContainer";
 
 const GamePage = () => {
-  return <div>GamePage</div>;
+  return (
+    <GameProvider>
+      <GameContainer />
+    </GameProvider>
+  );
 };
 
 export default GamePage;
