@@ -1,11 +1,13 @@
 import styles from "./QuoteDisplay.module.scss";
+// types
+import { Quote } from "../../types/quotes";
 
 type QuoteDisplayProps = {
-  quote: string;
+  currentQuote: Quote;
 };
 
-const QuoteDisplay = ({ quote }: QuoteDisplayProps) => {
-  return <div className={styles.quote_container}>{quote}</div>;
+const QuoteDisplay = ({ currentQuote }: QuoteDisplayProps) => {
+  return <div className={styles.quote_container}>{currentQuote.quote}</div>;
 };
 
 export default QuoteDisplay;

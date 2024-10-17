@@ -1,15 +1,16 @@
 import React from "react";
-import Quoter from "./Quoter";
+import QuoterCard from "./QuoterCard";
+import { Quoter } from "../types/quotes";
 
 type QuoterListProps = {
-  quoters: any[]; // TODO: create custom type
-  handleSelectQuoter: () => void;
+  quoters: Quoter[]; // TODO: create custom type
 };
-const QuoterList = ({ quoters, handleSelectQuoter }: QuoterListProps) => {
+
+const QuoterList = ({ quoters }: QuoterListProps) => {
   return (
     <div>
       {quoters.map((quoter) => (
-        <p>{quoter}</p>
+        <QuoterCard key={quoter.id} id={quoter.id} name={quoter.name} />
       ))}
     </div>
   );
