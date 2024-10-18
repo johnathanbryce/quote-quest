@@ -1,15 +1,12 @@
 import React from "react";
 import QuoterCard from "./QuoterCard";
-import { Quoter } from "../types/quotes";
+import { useGame } from "../context/GameContext";
 
-type QuoterListProps = {
-  quoters: Quoter[]; // TODO: create custom type
-};
-
-const QuoterList = ({ quoters }: QuoterListProps) => {
+const QuoterList = () => {
+  const { quotersList } = useGame();
   return (
     <div>
-      {quoters.map((quoter) => (
+      {quotersList.map((quoter) => (
         <QuoterCard key={quoter.id} id={quoter.id} name={quoter.name} />
       ))}
     </div>

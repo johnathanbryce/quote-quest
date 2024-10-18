@@ -66,3 +66,35 @@ img {
   height: auto;
   display: block;
 }
+
+// Typography
+
+h1 {
+  font-size: clamp(2rem, 3vw + 1rem, 3rem);
+  font-weight: $font-weight-bold;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 2.5vw + 1rem, 2.5rem);
+  font-weight: $font-weight-bold;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 2vw + 0.75rem, 2rem);
+  font-weight: $font-weight-bold;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 1.5vw + 0.5rem, 1.75rem);
+  font-weight: $font-weight-normal;
+}
+
+h5 {
+  font-size: clamp(1rem, 1vw + 0.25rem, 1.5rem);
+  font-weight: $font-weight-normal;
+}
+
+h6 {
+  font-size: clamp(0.875rem, 0.875vw + 0.125rem, 1.25rem);
+  font-weight: $font-weight-normal;
+}
