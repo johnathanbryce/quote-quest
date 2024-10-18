@@ -1,12 +1,8 @@
 import styles from "./QuoteDisplay.module.scss";
-// types
-import { Quote } from "../../types/quotes";
+import { useGame } from "../../context/GameContext";
 
-type QuoteDisplayProps = {
-  currentQuote: Quote;
-};
-
-const QuoteDisplay = ({ currentQuote }: QuoteDisplayProps) => {
+const QuoteDisplay = () => {
+  const { currentQuote } = useGame();
   return <div className={styles.quote_container}>{currentQuote.quote}</div>;
 };
 

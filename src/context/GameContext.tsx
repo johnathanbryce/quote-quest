@@ -14,6 +14,7 @@ type GameContextType = {
   currentQuote: Quote;
   quotersList: Quoter[];
   handleSelectAnswer: (quoter: string) => void;
+  handleQuoterToggle: (quoter: string) => void;
 };
 
 // Define the context and its default values
@@ -35,6 +36,8 @@ export const GameProvider = ({ children }: GameProviderProps) => {
     quotes[Math.floor(Math.random() * quotes.length)]
   ); // initialize with a random quote
   const [quotersList, setQuotersList] = useState<Quoter[]>(quoters);
+
+  // TODO: leverage useMemo where possible to minimize re-renders and optimize
 
   const handleSelectAnswer = (quoter: string) => {
     console.log(`Selected quoter: ${quoter}`);
@@ -58,6 +61,10 @@ export const GameProvider = ({ children }: GameProviderProps) => {
     }
   };
 
+  const handleQuoterToggle = (quoter: any) => {
+    console.log("click");
+  };
+
   /*   const handleFilterQuoter = (author: string) => {
     // toggle filtering out the quotes by quotes.author
     // update currentQuote with filtered results
@@ -67,7 +74,9 @@ export const GameProvider = ({ children }: GameProviderProps) => {
   const handleResetGame = () => {};
  */
   return (
-    <GameContext.Provider value={{ score, currentQuote, quotersList, handleSelectAnswer }}>
+    <GameContext.Provider
+      value={{ score, currentQuote, quotersList, handleSelectAnswer, handleQuoterToggle }}
+    >
       {children}
     </GameContext.Provider>
   );
