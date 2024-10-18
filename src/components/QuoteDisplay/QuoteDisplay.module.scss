@@ -1,4 +1,44 @@
+@import "../../styles/variables.scss";
+
 .quote_container {
-  width: 20rem;
-  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30rem;
+  width: 100%;
+}
+
+.quotes_wrapper {
+  position: relative;
+  max-width: 80%;
+  text-align: center;
+
+  p {
+    font-size: $font-size-lg;
+  }
+}
+
+blockquote {
+  font-style: italic;
+  color: $text-color;
+  padding: 2rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.opening_quote,
+.closing_quote {
+  position: absolute;
+  font-size: 4rem;
+  color: $accent-color;
+}
+
+.opening_quote {
+  top: -1rem;
+  left: -1rem;
+}
+
+.closing_quote {
+  top: -1rem;
+  right: -1rem;
 }
