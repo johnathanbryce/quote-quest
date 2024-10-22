@@ -1,15 +1,15 @@
-import { useGame } from "../context/GameContext";
+import Avatar from "./Avatar/Avatar";
 
 type QuoterCardProps = {
-  id: string;
   name: string;
+  image: string;
+  handleSelect: (name: string) => void;
 };
 
-const QuoterCard = ({ id, name }: QuoterCardProps) => {
-  const { handleSelectAnswer } = useGame();
+const QuoterCard = ({ name, image, handleSelect }: QuoterCardProps) => {
   return (
-    <div id={id} onClick={() => handleSelectAnswer(id)}>
-      {name}
+    <div onClick={() => handleSelect(name)}>
+      <Avatar name={name} image={image} />
     </div>
   );
 };
