@@ -11,25 +11,30 @@ export const quoters: Quoter[] = [
     id: uuidv4(),
     name: "AI",
     image: ai,
+    isActive: true,
   },
   {
     id: uuidv4(),
     name: "Trump",
     image: trump,
+    isActive: true,
   },
   {
     id: uuidv4(),
     name: "Charlie Sheen",
     image: charlie,
+    isActive: true,
   },
   {
     id: uuidv4(),
     name: "Ozzy Osbourne",
     image: ozzy,
+    isActive: true,
   },
   {
     id: uuidv4(),
     name: "Kanye West",
     image: kanye,
+    isActive: true,
   },
 ];

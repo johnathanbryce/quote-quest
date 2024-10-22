@@ -2,6 +2,7 @@ export type Quoter = {
   id: string;
   name: string;
   image: string;
+  isActive: boolean;
 };
 
 export type Quote = {

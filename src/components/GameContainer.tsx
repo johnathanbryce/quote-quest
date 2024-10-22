@@ -1,5 +1,5 @@
 import QuoteDisplay from "./QuoteDisplay/QuoteDisplay";
-import QuoterList from "./QuoterList";
+import QuoterFilterList from "./QuoterFilterList";
 import GameHeader from "./GameHeader/GameHeader";
 import GameFooter from "./GameFooter";
 
@@ -8,7 +8,7 @@ const GameContainer = () => {
     <div className="game_container">
       <GameHeader />
       <QuoteDisplay />
-      <QuoterList />
+      <QuoterFilterList />
       <GameFooter />
     </div>
   );
