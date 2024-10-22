@@ -14,8 +14,13 @@
 
 .score_container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
   gap: $spacing-lg;
+
+  p {
+    font-size: $font-size-xl;
+  }
 }
 
 .quoter_list_container {

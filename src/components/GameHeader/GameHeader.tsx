@@ -1,4 +1,5 @@
 import styles from "./GameHeader.module.scss";
+// components
 import Score from "./Score";
 import QuoterOptionsList from "./QuoterOptionsList";
 
