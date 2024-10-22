@@ -4,11 +4,11 @@ import styles from "./GameHeader.module.scss";
 import { useGame } from "../../context/GameContext";
 
 const Score = () => {
-  const { score } = useGame();
+  const { score, computerScore } = useGame();
   return (
     <div className={styles.score_container}>
-      <h4>Score: </h4>
-      <h4>{score}</h4>
+      <p>Quote Quest: {score}</p>
+      <p>You: {computerScore}</p>
     </div>
   );
 };
