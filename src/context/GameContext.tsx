@@ -16,14 +16,12 @@ type GameContextType = {
   quotersList: Quoter[];
   roundWinnerIsUser: boolean;
   handleSelectAnswer: (quoter: string) => void;
-  handleToggleActiveStatus: (targetName: string) => void;
+  handleToggleActiveQuoters: (targetName: string) => void;
   handleResetGame: () => void;
 };
 
-// Define the context and its default values
 const GameContext = createContext<GameContextType | undefined>(undefined);
 
-// Custom hook to use the GameContext
 export const useGame = () => {
   const context = useContext(GameContext);
   if (!context) {
@@ -70,21 +68,48 @@ export const GameProvider = ({ children }: GameProviderProps) => {
     }
   };
 
-  const handleToggleActiveStatus = (targetName: string) => {
-    // update quoters list to toggle target's isActive status:
+  const handleToggleActiveQuoters = (targetName: string) => {
+    const MIN_ACTIVE_QUOTERS = 2;
+
+    // count the number of active quoters before the toggle
+    const activeQuoters = quotersList.filter((quoter) => quoter.isActive);
+    const activeQuotersCount = activeQuoters.length;
+
+    // find the target quoter
+    const targetQuoter = quotersList.find((quoter) => quoter.name === targetName);
+
+    if (targetQuoter) {
+      // ensure at least 2 active quoters
+      if (targetQuoter.isActive && activeQuotersCount <= MIN_ACTIVE_QUOTERS) {
+        // TODO: display message that you cannot have less than 2 quoters
+        console.warn(
+          `Cannot deactivate "${targetName}". There must be at least ${MIN_ACTIVE_QUOTERS} active quoters.`
+        );
+        return;
+      }
+    }
+
+    // toggle the target quoter's isActive status
     const updatedQuotersList = quotersList.map((quoter) =>
       quoter.name === targetName ? { ...quoter, isActive: !quoter.isActive } : quoter
     );
     setQuotersList(updatedQuotersList);
 
-    // 1st. get a new array of quoters that have isActive status === true
-    const activeQuoters = quotersList.filter((quoter) => quoter.isActive);
-    const activeQuotersNames = activeQuoters.map((quoter) => quoter.name);
-    // 2nd. filter out quotes without active quoters:
+    // update the list of active quoters using the updated list
+    const updatedActiveQuoters = updatedQuotersList.filter((quoter) => quoter.isActive);
+    const activeQuotersNames = updatedActiveQuoters.map((quoter) => quoter.name);
+
+    // update the quotes array based on active quoters
     const updatedQuotesList = quotes.filter((quote) => activeQuotersNames.includes(quote.author));
     setQuotesArray(updatedQuotesList);
-    // 3rd. update the current quote:
-    setCurrentQuote(updatedQuotesList[Math.floor(Math.random() * quotes.length)]);
+
+    // ensure there's at least one quote before updating the current quote
+    if (updatedQuotesList.length > 0) {
+      setCurrentQuote(updatedQuotesList[Math.floor(Math.random() * updatedQuotesList.length)]);
+    } else {
+      console.warn("No quotes available for the selected active quoters.");
+      // TODO: handle "end game" of no more quotes
+    }
   };
 
   const handleResetGame = () => {
@@ -102,7 +127,7 @@ export const GameProvider = ({ children }: GameProviderProps) => {
         quotersList,
         roundWinnerIsUser,
         handleSelectAnswer,
-        handleToggleActiveStatus,
+        handleToggleActiveQuoters,
         handleResetGame,
       }}
     >
