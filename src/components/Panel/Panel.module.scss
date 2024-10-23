@@ -1,0 +1,9 @@
+@import "../../styles/variables.scss";
+@import "../../styles//mixins";
+
+.panel {
+  border-radius: $border-radius-lg;
+  background-color: $panel-color;
+  padding: $spacing-lg;
+  @include neon-glow($accent-color);
+}
