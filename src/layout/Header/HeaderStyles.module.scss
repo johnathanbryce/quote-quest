@@ -1,0 +1,18 @@
+@import "../../styles/variables.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.score_container {
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+}
+
+.score_title {
+  color: $accent-color;
+}

@@ -1,0 +1,15 @@
+@import "../styles/variables.scss";
+
+.game_container {
+  display: flex;
+  gap: $spacing-xl;
+  width: 100%;
+  margin-top: $spacing-xl;
+}
+
+.flex_container_primary {
+  flex: 0.8;
+}
+.flex_container_secondary {
+  flex: 0.2;
+}

@@ -1,19 +1,18 @@
 // layout
 import MainLayout from "./layout/MainLayout";
-import ContentLayout from "./layout/ContentLayout";
-import Header from "./layout/Header";
-import Footer from "./layout/Footer";
+import Header from "./layout/Header/Header";
 // content
 import GamePage from "./pages/GamePage";
+// context
+import { GameProvider } from "./context/GameContext";
 
 function App() {
   return (
     <MainLayout>
-      <Header />
-      <ContentLayout>
+      <GameProvider>
+        <Header />
         <GamePage />
-      </ContentLayout>
-      <Footer />
+      </GameProvider>
     </MainLayout>
   );
 }

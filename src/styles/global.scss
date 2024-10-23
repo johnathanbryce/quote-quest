@@ -2,6 +2,15 @@
 
 @import "./variables.scss";
 @import "./utility.scss";
+@import "./mixins";
+
+.main_layout {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 1rem 1rem;
+}
 
 *,
 *::before,
