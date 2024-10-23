@@ -3,6 +3,7 @@ import { useGame } from "../../context/GameContext";
 
 const QuoteDisplay = () => {
   const { currentQuote } = useGame();
+
   return (
     <div className={styles.quote_container}>
       <div className={styles.quotes_wrapper}>

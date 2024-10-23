@@ -1,20 +1,22 @@
+// components
 import QuoterCard from "./QuoterCard";
+// context
 import { useGame } from "../context/GameContext";
 
 const QuoterFilterList = () => {
-  const { quotersList, handleToggleActiveStatus } = useGame();
+  const { quotersList, handleToggleActiveQuoters } = useGame();
   return (
-    <>
+    <div className="flex-center">
       {quotersList.map((quoter) => (
         <div key={quoter.id}>
           <QuoterCard
             image={quoter.image}
             name={quoter.name}
-            handleSelect={handleToggleActiveStatus}
+            handleSelect={handleToggleActiveQuoters}
           />
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
