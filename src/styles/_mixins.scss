@@ -5,3 +5,9 @@
     0px 0px 15px rgba(red($color), green($color), blue($color), 0.7);
   border: 1px solid rgba(red($color), green($color), blue($color), 0.6);
 }
+
+@mixin neon-glow-light($color: $accent-color) {
+  box-shadow: 0px 2px 6px rgba(red($color), green($color), blue($color), 0.3),
+    0px 0px 10px rgba(red($color), green($color), blue($color), 0.4);
+  border: 1px solid rgba(red($color), green($color), blue($color), 0.4);
+}

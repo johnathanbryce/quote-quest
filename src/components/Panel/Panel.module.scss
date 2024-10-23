@@ -7,3 +7,7 @@
   padding: $spacing-lg;
   @include neon-glow($accent-color);
 }
+
+.panel-light {
+  @include neon-glow-light($accent-color);
+}
