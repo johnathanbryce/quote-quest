@@ -1,7 +1,7 @@
-import QuoterCard from "./QuoterCard";
+import QuoterCard from "../Cards/QuoterCard";
 
 // context
-import { useGame } from "../context/GameContext";
+import { useGame } from "../../../context/GameContext";
 
 const QuoterOptionsList = () => {
   const { quotersList, handleSelectAnswer } = useGame();

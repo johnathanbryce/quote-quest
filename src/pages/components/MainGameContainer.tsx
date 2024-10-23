@@ -1,6 +1,6 @@
 import React from "react";
-import Panel from "../../components/Panel/Panel";
-import QuoterOptionsList from "../../components/QuoterOptionsList";
+import Panel from "./Panel/Panel";
+import QuoterOptionsList from "./MainGameContainer/QuoterOptionsList";
 
 const MainGameContainer = () => {
   return (

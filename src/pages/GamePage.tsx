@@ -1,6 +1,6 @@
 import styles from "./GamePageStyles.module.scss";
-import MainGameContainer from "./_components/MainGameContainer";
-import Panel from "../components/Panel/Panel";
+import MainGameContainer from "./components/MainGameContainer";
+import Panel from "./components/Panel/Panel";
 
 const GamePage = () => {
   return (
