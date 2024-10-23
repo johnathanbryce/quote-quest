@@ -1,7 +1,6 @@
 // layout
 import MainLayout from "./layout/MainLayout";
 import Header from "./layout/Header/Header";
-import Footer from "./layout/Footer";
 // content
 import GamePage from "./pages/GamePage";
 // context
@@ -13,7 +12,6 @@ function App() {
       <GameProvider>
         <Header />
         <GamePage />
-        <Footer />
       </GameProvider>
     </MainLayout>
   );
