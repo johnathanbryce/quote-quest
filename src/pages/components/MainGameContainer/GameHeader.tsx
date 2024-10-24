@@ -1,4 +1,5 @@
 import styles from "./MainGameContainer.module.scss";
+import { correctAnswerHeaderList } from "./_data/gameMessages";
 
 type GameHeaderProps = {
   isGameStarted: boolean;
@@ -7,17 +8,18 @@ type GameHeaderProps = {
 };
 
 const GameHeader = ({ isGameStarted, roundWinnerIsUser, correctAnswer }: GameHeaderProps) => {
-  console.log(correctAnswer.length < 0);
+  const randomIndex = Math.floor(Math.random() * correctAnswerHeaderList.length);
+  const randomCorrectAnswerHeader = correctAnswerHeaderList[randomIndex];
   return (
     <div className={styles.game_header_container}>
       <div className={styles.circle}></div>
-      <h4 className={styles.game_header_title}>
+      <h2 className={styles.game_header_title}>
         {!isGameStarted
           ? "Quote Quest" // initial page load / reset game
           : roundWinnerIsUser
-          ? "Quote Quest" // when user wins
-          : `The correct answer is ${correctAnswer}`}
-      </h4>
+          ? `${randomCorrectAnswerHeader}` // when user wins
+          : `The correct answer was ${correctAnswer}`}
+      </h2>
       <div className={styles.circle}></div>
     </div>
   );
