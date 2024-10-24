@@ -76,3 +76,26 @@
     border: 1px solid rgba(red($success-color), green($success-color), blue($success-color), 0.4);
   }
 }
+
+// for score board
+@keyframes shuffle-tilt-pop {
+  0% {
+    transform: translateX(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(-5px) rotate(-5deg) scale(1.05); /* Initial shuffle left with tilt */
+  }
+  40% {
+    transform: translateX(5px) rotate(5deg) scale(1.1); /* Shuffle right with bigger pop and tilt */
+  }
+  60% {
+    transform: translateX(-3px) rotate(-3deg) scale(1.08); /* Smaller shuffle back left */
+  }
+  80% {
+    transform: translateX(3px) rotate(3deg) scale(1.05); /* Smaller shuffle right */
+  }
+  100% {
+    transform: translateX(0) rotate(0deg) scale(1); /* Settle back to normal */
+  }
+}

@@ -1,4 +1,5 @@
 @import "../../../styles/variables";
+@import "../../../styles/utility";
 
 .header {
   display: flex;
@@ -7,16 +8,37 @@
   width: 100%;
 }
 
+// score styles
 .score_container {
   display: flex;
   align-items: center;
   gap: $spacing-lg;
+
+  p {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xl;
+  }
 }
 
 .score_title {
   color: $accent-color;
 }
 
+.score_title_player_wins {
+  color: $success-color;
+}
+
+.computer_wins {
+  color: $accent-color;
+  animation: shuffle-tilt-pop 0.8s ease-in-out;
+}
+
+.player_wins {
+  color: $success-color;
+  animation: shuffle-tilt-pop 0.8s ease-in-out;
+}
+
+// logo styles
 .logo_container {
   background-color: $background-color;
   padding: $spacing-lg;
@@ -28,12 +50,22 @@
 .quote_quest_logo {
   font-weight: $font-weight-bold;
   color: $text-color;
-  -webkit-text-stroke: 2px $neon-accent-color;
-  text-shadow: 0 0 5px $neon-accent-color, 0 0 10px $neon-accent-color, 0 0 15px $neon-accent-color;
-  transition: color $transition-normal, text-shadow $transition-slow;
+  transition: -webkit-text-stroke 0.3s, text-shadow 0.3s;
   cursor: pointer;
   line-height: 0.5;
   transform: rotate(-20deg);
+}
+
+/* neon pink stroke (default) */
+.neon_stroke {
+  -webkit-text-stroke: 2px $neon-accent-color;
+  text-shadow: 0 0 5px $neon-accent-color, 0 0 10px $neon-accent-color, 0 0 15px $neon-accent-color;
+}
+
+/* success stroke (user wins round) */
+.success_stroke {
+  -webkit-text-stroke: 2px $success-color;
+  text-shadow: 0 0 5px $success-color, 0 0 10px $success-color, 0 0 15px $success-color;
 }
 
 .quote,

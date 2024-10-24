@@ -4,7 +4,7 @@
 .panel {
   border-radius: $border-radius-lg;
   background-color: $panel-color;
-  padding: $spacing-lg;
+  padding: $spacing-md;
   @include neon-glow($accent-color);
   @include neon-border-pulse($accent-color);
 }
