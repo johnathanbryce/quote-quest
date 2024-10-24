@@ -1,8 +1,8 @@
 // Colors
 $primary-color: #ff9f43; // TODO: not currently in use
-$secondary-color: #1abc9c; /* A playful turquoise */
+$secondary-color: #1abc9c;
 $success-color: $secondary-color;
-$error-color: red; //TODO:
+$error-color: #ff6b6b;
 $accent-color: #e84393;
 $neon-accent-color: rgba(255, 70, 155, 0.8);
 $accent-color-light: rgba(232, 67, 147, 0.55);
@@ -19,6 +19,9 @@ $font-size-lg: 1.25rem;
 $font-size-xl: 1.5rem;
 $font-weight-normal: 400;
 $font-weight-bold: 600;
+
+// Icons
+$icon-size: 2rem;
 
 // Spacing
 $spacing-xs: 0.25rem;

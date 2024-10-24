@@ -1,0 +1,77 @@
+@import "../../../../styles/variables";
+
+.filter_avatar_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-lg;
+}
+
+.filter_avatar_img {
+  width: $icon-size;
+  height: $icon-size;
+  border-radius: 50%;
+}
+
+.filter_avatar_name {
+  transition: color 0.3s;
+}
+
+/* Active state styling */
+.active {
+  color: $success-color; /* Green color for active state */
+}
+
+/* The switch container */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+/* Hide the default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Checked state */
+.switch input:checked + .slider {
+  background-color: $success-color;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Focus styling */
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px $success-color;
+}
