@@ -6,12 +6,17 @@ import Logo from "./Logo";
 import { useGame } from "../../../context/GameContext";
 
 const Header = () => {
-  const { score, computerScore, roundWinnerIsUser } = useGame();
+  const { score, computerScore, roundWinnerIsUser, isGameStarted } = useGame();
   return (
     <header className={styles.header}>
       <Logo roundWinnerIsUser={roundWinnerIsUser} />
       <Panel glowStrength="light">
-        <Score score={score} computerScore={computerScore} roundWinnerIsUser={roundWinnerIsUser} />
+        <Score
+          score={score}
+          computerScore={computerScore}
+          roundWinnerIsUser={roundWinnerIsUser}
+          isGameStarted={isGameStarted}
+        />
       </Panel>
     </header>
   );
