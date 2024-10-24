@@ -5,6 +5,25 @@ export const quotes: Quote[] = [
   // Donald Trump Quotes
   {
     id: uuidv4(),
+    quote:
+      "The concept of global warming was created by and for the Chinese in order to make U.S. manufacturing non-competitive.",
+    author: "Donald Trump",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "My Twitter has become so powerful that I can actually make my enemies tell the truth.",
+    author: "Donald Trump",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "I know words. I have the best words.",
+    author: "Donald Trump",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
     quote: "I will build a great wall – and nobody builds walls better than me, believe me.",
     author: "Donald Trump",
     isReal: true,
@@ -49,6 +68,19 @@ export const quotes: Quote[] = [
   {
     id: uuidv4(),
     quote: "We will make America great again.",
+    author: "Donald Trump",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "Part of the beauty of me is that I am very rich.",
+    author: "Donald Trump",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote:
+      "I like thinking big. If you’re going to be thinking anything, you might as well think big.",
     author: "Donald Trump",
     isReal: true,
   },
@@ -103,6 +135,62 @@ export const quotes: Quote[] = [
     author: "Charlie Sheen",
     isReal: true,
   },
+  {
+    id: uuidv4(),
+    quote:
+      "I have a different constitution. I have a different brain, I have a different heart. I got tiger blood, man.",
+    author: "Charlie Sheen",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "Winning, anyone? Rhymes with winning? Anyone? Yeah, that would be us.",
+    author: "Charlie Sheen",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "I’m tired of pretending I’m not special.",
+    author: "Charlie Sheen",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "I am on a drug. It’s called Charlie Sheen.",
+    author: "Charlie Sheen",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "Resentments are the rocket fuel that lives in the tip of my saber.",
+    author: "Charlie Sheen",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "I’m bi-winning. I win here, I win there. Now what?",
+    author: "Charlie Sheen",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "Dying’s for fools. Amateurs.",
+    author: "Charlie Sheen",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "I have one speed, I have one gear: Go.",
+    author: "Charlie Sheen",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote:
+      "The run I was on made Sinatra, Flynn, Jagger, Richards, all of them look like droopy-eyed armless children.",
+    author: "Charlie Sheen",
+    isReal: true,
+  },
 
   // Ozzy Osbourne Quotes
   {
@@ -144,8 +232,235 @@ export const quotes: Quote[] = [
     author: "Ozzy Osbourne",
     isReal: true,
   },
+  {
+    id: uuidv4(),
+    quote: "I'm about as fucking normal as it gets.",
+    author: "Ozzy Osbourne",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote:
+      "I'm not the kind of person who tries to be cool or trendy, I'm definitely an individual.",
+    author: "Ozzy Osbourne",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote:
+      "I’m not going to say, ‘I’m never going to do it again,’ because I don’t want to be a hypocrite.",
+    author: "Ozzy Osbourne",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "I was really sick, and I had a choice: Either die or do something different.",
+    author: "Ozzy Osbourne",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "I can’t even remember my own phone number.",
+    author: "Ozzy Osbourne",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "I’m not afraid of dying. I just don’t want to be there when it happens.",
+    author: "Ozzy Osbourne",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "I’ve met God before. It wasn’t very impressive.",
+    author: "Ozzy Osbourne",
+    isReal: true,
+  },
+
+  // Kanye West Quotes
+  {
+    id: uuidv4(),
+    quote: "I am Warhol. I am the number one most impactful artist of our generation.",
+    author: "Kanye West",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "My greatest pain in life is that I will never be able to see myself perform live.",
+    author: "Kanye West",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "I am so credible and so influential and so relevant that I will change things.",
+    author: "Kanye West",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "I feel like I’m too busy writing history to read it.",
+    author: "Kanye West",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote:
+      "For me, money is not my definition of success. Inspiring people is a definition of success.",
+    author: "Kanye West",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "My greatest pain in life is that I will never be able to see myself perform live.",
+    author: "Kanye West",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "I feel like I’m too busy writing history to read it.",
+    author: "Kanye West",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote:
+      "I refuse to accept other people's ideas of happiness for me. As if there's a 'one size fits all' standard for happiness.",
+    author: "Kanye West",
+    isReal: true,
+  },
+  {
+    id: uuidv4(),
+    quote: "Believe in your flyness, conquer your shyness.",
+    author: "Kanye West",
+    isReal: true,
+  },
 
   // Fake Quotes attributed to "AI"
+
+  // Kanye West - Fake Quotes
+  {
+    id: uuidv4(),
+    quote: "I don’t just break the mold; I melt it and shape it into something new.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote: "My thoughts are the blueprint for the future, and the world is still catching up.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote: "I don’t follow trends; I create waves that ripple through culture.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote: "The problem with reality is that it's not always as creative as I am.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote: "When you look at the stars, they’re looking back at me.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote: "I never stop thinking big, because my imagination doesn’t fit in a box.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote: "I have conversations with the universe. It listens because I speak truth.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote:
+      "Greatness isn’t something you achieve; it’s something you realize was inside you all along.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote:
+      "My music is more than sound. It’s a feeling you can't put into words, but I do it anyway.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote: "I redefine success. To me, success is when my ideas become reality, not just words.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote: "I don’t need validation; I am validation.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote: "My reflection isn’t in the mirror; it’s in the world I’m shaping.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote: "My thoughts are art. My words are the canvas. My music is the masterpiece.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote: "I wear my confidence like armor, and I never take it off.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote: "I don’t think outside the box; I don’t even see the box.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote: "I dream bigger than most people think is possible, and that’s why I succeed.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote: "I’m not just making music; I’m making the soundtrack of my legacy.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote: "My ideas aren’t ahead of their time; they redefine it.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote: "I speak in visions; that’s why not everyone understands me.",
+    author: "AI",
+    isReal: false,
+  },
+  {
+    id: uuidv4(),
+    quote: "I don’t chase greatness; it gravitates towards me.",
+    author: "AI",
+    isReal: false,
+  },
+
   // Donald Trump - Fake Quotes
   {
     id: uuidv4(),
