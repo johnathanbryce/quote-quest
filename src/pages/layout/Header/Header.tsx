@@ -5,7 +5,13 @@ import Score from "./Score";
 const Header = () => {
   return (
     <header className={styles.header}>
-      <h2>LOGO</h2>
+      <div className={styles.logo_container}>
+        <h1 className={styles.quote_quest_logo}>
+          <span className={styles.quote}>Quote</span>
+          <br />
+          <span className={styles.quest}>Quest</span>
+        </h1>
+      </div>
       <Panel glowStrength="light">
         <Score />
       </Panel>

@@ -16,3 +16,29 @@
 .score_title {
   color: $accent-color;
 }
+
+.logo_container {
+  background-color: $background-color;
+  padding: $spacing-lg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote_quest_logo {
+  font-weight: $font-weight-bold;
+  color: $text-color;
+  -webkit-text-stroke: 2px $neon-accent-color;
+  text-shadow: 0 0 5px $neon-accent-color, 0 0 10px $neon-accent-color, 0 0 15px $neon-accent-color;
+  transition: color $transition-normal, text-shadow $transition-slow;
+  cursor: pointer;
+  line-height: 0.5;
+  transform: rotate(-20deg);
+}
+
+.quote,
+.quest {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
