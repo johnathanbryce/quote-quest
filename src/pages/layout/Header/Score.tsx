@@ -1,6 +1,6 @@
 import styles from "./HeaderStyles.module.scss";
 // context
-import { useGame } from "../../context/GameContext";
+import { useGame } from "../../../context/GameContext";
 
 const Score = () => {
   const { score, computerScore } = useGame();
