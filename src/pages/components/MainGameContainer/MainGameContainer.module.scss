@@ -18,12 +18,9 @@
 }
 
 .game_header_title {
-  font-size: 2.5rem; /* Larger font size */
-  font-weight: 700; /* Bold font weight */
-  text-shadow: 0px 4px 10px rgba(232, 67, 147, 0.7), 0px 0px 15px rgba(232, 67, 147, 1);
-  letter-spacing: 2px; /* Adds spacing between letters */
-  text-transform: uppercase; /* Makes the text uppercase */
-  transition: transform 0.3s, text-shadow 0.3s;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .circle {
