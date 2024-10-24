@@ -9,10 +9,10 @@
   @include neon-border-pulse($accent-color);
 }
 
-.panel-light {
+.panel_light {
   @include neon-glow-light($accent-color);
 }
 
-.panel-success {
+.panel_success {
   @include neon-border-pulse-success($success-color);
 }

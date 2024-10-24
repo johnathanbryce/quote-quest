@@ -1,6 +1,6 @@
 import styles from "./GamePageStyles.module.scss";
 import MainGameContainer from "./components/MainGameContainer/MainGameContainer";
-import Panel from "./components/Panel/Panel";
+import Settings from "./components/Settings/Settings";
 
 const GamePage = () => {
   return (
@@ -15,9 +15,7 @@ const GamePage = () => {
 
       {/* flex container for right side on xl/lg screens*/}
       <div className={styles.flex_container_secondary}>
-        <Panel glowStrength="light">
-          <p>options...</p>
-        </Panel>
+        <Settings />
       </div>
     </section>
   );

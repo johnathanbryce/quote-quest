@@ -15,8 +15,8 @@ const Panel: React.FC<PanelProps> = ({
   /*   const panelClassName = `${styles.panel} ${glowStrength === "light" ? styles["panel-light"] : ""}`; */
   const { roundWinnerIsUser } = useGame();
   const panelClassName = `${styles.panel} ${
-    glowStrength === "light" ? styles["panel-light"] : ""
-  } ${roundWinnerIsUser ? styles["panel-success"] : ""}`;
+    glowStrength === "light" ? styles["panel_light"] : ""
+  } ${roundWinnerIsUser ? styles["panel_success"] : ""}`;
 
   return <div className={panelClassName}>{children}</div>;
 };

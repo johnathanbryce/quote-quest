@@ -99,3 +99,13 @@
     transform: translateX(0) rotate(0deg) scale(1); /* Settle back to normal */
   }
 }
+
+/* spin animation for settings icon */
+@keyframes spin {
+  from {
+    transform: rotate(0deg); /* Start rotation */
+  }
+  to {
+    transform: rotate(360deg); /* Complete one full rotation */
+  }
+}
