@@ -1,19 +1,17 @@
 import styles from "./HeaderStyles.module.scss";
 import Panel from "../../components/Panel/Panel";
 import Score from "./Score";
+import Logo from "./Logo";
+// context
+import { useGame } from "../../../context/GameContext";
 
 const Header = () => {
+  const { score, computerScore, roundWinnerIsUser } = useGame();
   return (
     <header className={styles.header}>
-      <div className={styles.logo_container}>
-        <h1 className={styles.quote_quest_logo}>
-          <span className={styles.quote}>Quote</span>
-          <br />
-          <span className={styles.quest}>Quest</span>
-        </h1>
-      </div>
+      <Logo roundWinnerIsUser={roundWinnerIsUser} />
       <Panel glowStrength="light">
-        <Score />
+        <Score score={score} computerScore={computerScore} roundWinnerIsUser={roundWinnerIsUser} />
       </Panel>
     </header>
   );
