@@ -2,10 +2,11 @@ import { useState } from "react";
 import styles from "./Settings.module.scss";
 // components
 import Panel from "../Panel/Panel";
+import QuoterFilter from "./QuoterFilter";
 // icons
 import { IoMdSettings, IoMdClose } from "react-icons/io";
 // third party
-import { Transition } from "react-transition-group";
+import { Transition, TransitionStatus } from "react-transition-group";
 // context
 import { useGame } from "../../../context/GameContext";
 
@@ -18,15 +19,16 @@ const defaultStyle = {
   opacity: 0,
 };
 
-const transitionStyles = {
+const transitionStyles: Record<TransitionStatus, React.CSSProperties> = {
   entering: { maxHeight: 0, opacity: 0 },
-  entered: { maxHeight: "500px", opacity: 1 },
-  exiting: { maxHeight: "500px", opacity: 1 },
+  entered: { maxHeight: "100%", opacity: 1 },
+  exiting: { maxHeight: "100%", opacity: 1 },
   exited: { maxHeight: 0, opacity: 0 },
+  unmounted: { maxHeight: 0, opacity: 0 },
 };
 
 const Settings = () => {
-  const { roundWinnerIsUser } = useGame();
+  const { roundWinnerIsUser, quotersList } = useGame();
 
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
@@ -45,11 +47,7 @@ const Settings = () => {
                 ...transitionStyles[state],
               }}
             >
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, corrupti iusto
-                consequuntur voluptatibus ut soluta provident repudiandae minima deleniti labore
-                rerum deserunt similique dolores expedita? Ad aut iure facere quas.
-              </p>
+              <QuoterFilter quotersList={quotersList} />
             </div>
           )}
         </Transition>

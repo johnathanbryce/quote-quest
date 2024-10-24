@@ -46,6 +46,7 @@ export const GameProvider = ({ children }: GameProviderProps) => {
   // game & round status:
   const [isGameStarted, setIsGameStarted] = useState(false);
   const [isGameEnded, setIsGameEnded] = useState(false);
+  // user feedback
   const [roundWinnerIsUser, setRoundWinnerIsUser] = useState(false);
   const [correctAnswer, setCorrectAnswer] = useState("");
 
@@ -94,8 +95,7 @@ export const GameProvider = ({ children }: GameProviderProps) => {
     if (targetQuoter) {
       // ensure at least 2 active quoters
       if (targetQuoter.isActive && activeQuotersCount <= MIN_ACTIVE_QUOTERS) {
-        // TODO: display message that you cannot have less than 2 quoters
-        console.warn(
+        console.error(
           `Cannot deactivate "${targetName}". There must be at least ${MIN_ACTIVE_QUOTERS} active quoters.`
         );
         return;
