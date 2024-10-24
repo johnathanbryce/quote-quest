@@ -1,8 +1,10 @@
+@import "../../../styles/variables";
+
 $modal-background-color: rgba(0, 0, 0, 0.7);
-$modal-content-bg: #fff;
-$modal-padding: 1.5rem;
-$modal-border-radius: 10px;
-$modal-close-color: #333;
+$modal-content-bg: $panel-color;
+$modal-padding: $spacing-lg;
+$modal-border-radius: $border-radius-lg;
+$modal-close-color: $text-color;
 $modal-z-index: 1000;
 
 .modal_overlay {
@@ -23,8 +25,8 @@ $modal-z-index: 1000;
   padding: $modal-padding;
   border-radius: $modal-border-radius;
   position: relative;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: $box-shadow-lg; // Using the global shadow
+  animation: fadeIn $transition-normal ease-in-out;
 
   @keyframes fadeIn {
     from {
@@ -40,15 +42,15 @@ $modal-z-index: 1000;
 
 .modal_close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0rem;
+  right: 1rem;
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 3rem;
   cursor: pointer;
   color: $modal-close-color;
 }
 
 .modal_content {
-  margin-top: 1rem;
+  margin-top: $spacing-md; // Syncing with spacing-md
 }

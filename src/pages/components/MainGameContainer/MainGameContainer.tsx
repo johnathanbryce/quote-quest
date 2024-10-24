@@ -7,6 +7,7 @@ import QuoterOptionsList from "./QuoterOptionsList";
 import GameHeader from "./GameHeader";
 import QuoteDisplay from "./QuoteDisplay/QuoteDisplay";
 import AnswerHeader from "./AnswerHeader";
+import GameInstructions from "./GameInstructions";
 import Modal from "../Modal/Modal";
 // context
 import { useGame } from "../../../context/GameContext";
@@ -31,8 +32,7 @@ const MainGameContainer = () => {
         <button onClick={() => setIsModalOpen(true)}>Open Modal</button>
 
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-          <h2>How to Play</h2>
-          <p>Here are the instructions on how to play the game...</p>
+          <GameInstructions />
         </Modal>
       </section>
     </Panel>
