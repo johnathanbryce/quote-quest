@@ -12,3 +12,7 @@
 .panel-light {
   @include neon-glow-light($accent-color);
 }
+
+.panel-success {
+  @include neon-border-pulse-success($success-color);
+}

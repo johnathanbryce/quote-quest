@@ -12,7 +12,7 @@ const MainGameContainer = () => {
   const { isGameStarted, roundWinnerIsUser, correctAnswer } = useGame();
 
   return (
-    <Panel>
+    <Panel roundWinnerIsUser={roundWinnerIsUser}>
       <section className={styles.main_game_container}>
         <GameHeader
           isGameStarted={isGameStarted}

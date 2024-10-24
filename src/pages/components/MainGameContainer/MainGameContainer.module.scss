@@ -10,16 +10,26 @@
 }
 
 // HEADER
-.game_header_container {
+.game_header_container_base {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1rem;
   border-radius: $border-radius-lg;
   width: 100%;
+}
 
+.game_header_container {
+  @extend .game_header_container_base;
   background-color: $neon-accent-color;
   @include neon-glow($neon-accent-color);
+}
+
+.game_header_container_winner {
+  @extend .game_header_container_base;
+  background-color: $secondary-color;
+  animation: pulseWinner 1s ease-in-out 2, settleToGreen 1s forwards;
+  @include neon-glow($secondary-color);
 }
 
 .game_header_title {

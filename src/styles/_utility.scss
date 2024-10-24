@@ -38,3 +38,41 @@
       0px 0px 10px rgba(red($accent-color), green($accent-color), blue($accent-color), 0.5);
   }
 }
+
+// for game header container
+@keyframes pulseWinner {
+  0% {
+    background-color: $accent-color;
+  }
+  50% {
+    background-color: lighten($success-color, 20%);
+  }
+  100% {
+    background-color: $success-color;
+  }
+}
+
+@keyframes settleToGreen {
+  from {
+    background-color: lighten($success-color, 20%);
+  }
+  to {
+    background-color: $success-color;
+  }
+}
+
+// for main game panel
+@keyframes neon-border-pulse-green {
+  0% {
+    box-shadow: 0px 4px 12px
+        rgba(red($success-color), green($success-color), blue($success-color), 0.5),
+      0px 0px 15px rgba(red($success-color), green($success-color), blue($success-color), 0.7);
+    border: 1px solid rgba(red($success-color), green($success-color), blue($success-color), 0.6);
+  }
+  100% {
+    box-shadow: 0px 4px 12px
+        rgba(red($success-color), green($success-color), blue($success-color), 0.2),
+      0px 0px 15px rgba(red($success-color), green($success-color), blue($success-color), 0.4);
+    border: 1px solid rgba(red($success-color), green($success-color), blue($success-color), 0.4);
+  }
+}
