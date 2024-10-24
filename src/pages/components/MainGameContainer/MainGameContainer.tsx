@@ -4,6 +4,7 @@ import Panel from "../Panel/Panel";
 import QuoterOptionsList from "./QuoterOptionsList";
 import GameHeader from "./GameHeader";
 import QuoteDisplay from "./QuoteDisplay/QuoteDisplay";
+import AnswerHeader from "./AnswerHeader";
 // context
 import { useGame } from "../../../context/GameContext";
 
@@ -19,7 +20,7 @@ const MainGameContainer = () => {
           correctAnswer={correctAnswer}
         />
         <QuoteDisplay />
-        {/* display quoter options in a flex-wrap: */}
+        <AnswerHeader />
         <QuoterOptionsList />
         <button> How To Play (modal)</button>
       </section>

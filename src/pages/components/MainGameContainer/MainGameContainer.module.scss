@@ -1,4 +1,5 @@
 @import "../../../styles/variables";
+@import "../../../styles//mixins";
 
 .main_game_container {
   display: flex;
@@ -7,6 +8,7 @@
   gap: $spacing-lg;
 }
 
+// HEADER
 .game_header_container {
   display: flex;
   align-items: center;
@@ -28,4 +30,23 @@
   height: 1rem;
   background-color: $panel-color;
   border-radius: 50%;
+}
+
+// QUOTERS LIST
+
+.quoters_list_header {
+  text-align: center;
+  padding: $spacing-lg;
+  font-weight: $font-weight-bold;
+  border-radius: $border-radius-lg;
+  @include neon-glow-light($muted-color);
+  width: 94%;
+}
+
+.quoters_list_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: $spacing-xl;
 }
