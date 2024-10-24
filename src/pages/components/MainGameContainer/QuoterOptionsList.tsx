@@ -1,7 +1,6 @@
 import styles from "./MainGameContainer.module.scss";
 // components
-import QuoterCard from "../Cards/QuoterCard";
-import Panel from "../Panel/Panel";
+import QuoterCard from "./QuoterCard";
 // context
 import { useGame } from "../../../context/GameContext";
 
@@ -14,13 +13,13 @@ const QuoterOptionsList = () => {
       {quotersList.map((quoter) => {
         if (quoter.isActive) {
           return (
-            <Panel glowStrength="light" key={quoter.id}>
+            <div key={quoter.id}>
               <QuoterCard
                 name={quoter.name}
                 image={quoter.image}
                 handleSelect={handleSelectAnswer}
               />
-            </Panel>
+            </div>
           );
         } else {
           return null;

@@ -1,4 +1,5 @@
 import styles from "./MainGameContainer.module.scss";
+// data
 import { correctAnswerHeaderList } from "./_data/gameMessages";
 
 type GameHeaderProps = {

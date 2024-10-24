@@ -1,13 +1,15 @@
 // Colors
-$primary-color: #ff9f43; /* A bright orange for primary elements */
+$primary-color: #ff9f43; // TODO: not currently in use
 $secondary-color: #1abc9c; /* A playful turquoise */
 $success-color: $secondary-color;
 $error-color: red; //TODO:
 $accent-color: #e84393;
+$neon-accent-color: rgba(255, 70, 155, 0.8);
+$accent-color-light: rgba(232, 67, 147, 0.55);
 $background-color: #000000;
 $panel-color: #1a1a1a;
 $text-color: #f1f1f1;
-$muted-color: #bdc3c7; /* Softer grey for muted elements */
+$muted-color: #bdc3c7;
 
 // Typography
 $font-family-base: "Arial, sans-serif";

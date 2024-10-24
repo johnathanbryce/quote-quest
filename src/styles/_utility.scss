@@ -1,0 +1,40 @@
+@keyframes neon-flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+    box-shadow: 0px 0px 15px rgba(255, 70, 155, 0.8), 0px 0px 30px rgba(255, 70, 155, 0.4);
+  }
+  20%,
+  24%,
+  55% {
+    opacity: 0.6;
+    box-shadow: 0px 0px 5px rgba(255, 70, 155, 0.5), 0px 0px 10px rgba(255, 70, 155, 0.2);
+  }
+  22%,
+  53% {
+    opacity: 0.8;
+    box-shadow: 0px 0px 10px rgba(255, 70, 155, 0.7), 0px 0px 20px rgba(255, 70, 155, 0.3);
+  }
+}
+
+@keyframes neon-border-pulse {
+  0%,
+  100% {
+    border-color: rgba(red($accent-color), green($accent-color), blue($accent-color), 0.6);
+    box-shadow: 0px 4px 12px
+        rgba(red($accent-color), green($accent-color), blue($accent-color), 0.5),
+      0px 0px 15px rgba(red($accent-color), green($accent-color), blue($accent-color), 0.7);
+  }
+  50% {
+    border-color: rgba(red($accent-color), green($accent-color), blue($accent-color), 0.4);
+    box-shadow: 0px 4px 12px
+        rgba(red($accent-color), green($accent-color), blue($accent-color), 0.3),
+      0px 0px 10px rgba(red($accent-color), green($accent-color), blue($accent-color), 0.5);
+  }
+}

@@ -49,8 +49,6 @@ export const GameProvider = ({ children }: GameProviderProps) => {
   const [roundWinnerIsUser, setRoundWinnerIsUser] = useState(false);
   const [correctAnswer, setCorrectAnswer] = useState("");
 
-  console.log(roundWinnerIsUser);
-
   const handleSelectAnswer = (quoter: string) => {
     if (!isGameStarted) setIsGameStarted(true);
     // if computer wins:

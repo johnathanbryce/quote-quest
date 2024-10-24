@@ -1,5 +1,5 @@
 // components
-import QuoterCard from "../Cards/QuoterCard";
+import QuoterCard from "../MainGameContainer/QuoterCard";
 // context
 import { useGame } from "../../../context/GameContext";
 

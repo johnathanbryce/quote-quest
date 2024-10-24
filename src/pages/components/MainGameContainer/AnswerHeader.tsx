@@ -1,4 +1,5 @@
 import styles from "./MainGameContainer.module.scss";
+// data
 import { headerTitleOptions } from "./_data/gameMessages";
 
 const AnswerHeader = () => {
