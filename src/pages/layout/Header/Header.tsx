@@ -1,5 +1,5 @@
 import styles from "./HeaderStyles.module.scss";
-import Panel from "../../pages/components/Panel/Panel";
+import Panel from "../../components/Panel/Panel";
 import Score from "./Score";
 
 const Header = () => {

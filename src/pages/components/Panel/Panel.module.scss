@@ -1,13 +1,18 @@
 @import "../../../styles/variables";
-@import "../../../styles//mixins";
+@import "../../../styles/mixins";
 
 .panel {
   border-radius: $border-radius-lg;
   background-color: $panel-color;
   padding: $spacing-lg;
   @include neon-glow($accent-color);
+  @include neon-border-pulse($accent-color);
 }
 
 .panel-light {
   @include neon-glow-light($accent-color);
+}
+
+.panel-success {
+  @include neon-border-pulse-success($success-color);
 }

@@ -1,0 +1,116 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+@import "../../../styles/utility";
+
+.main_game_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-xl;
+}
+
+// HEADER
+.game_header_container_base {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-radius: $border-radius-lg;
+  width: 100%;
+}
+
+.game_header_container {
+  @extend .game_header_container_base;
+  background-color: $neon-accent-color;
+  @include neon-glow($neon-accent-color);
+}
+
+.game_header_container_winner {
+  @extend .game_header_container_base;
+  background-color: $secondary-color;
+  animation: pulseWinner 1s ease-in-out 2, settleToGreen 1s forwards;
+  @include neon-glow($secondary-color);
+}
+
+.game_header_title {
+  font-weight: $font-weight-bold;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.circle {
+  width: 1rem;
+  height: 1rem;
+  background-color: $panel-color;
+  border-radius: 50%;
+}
+
+// QUOTERS LIST
+
+.quoters_list_header {
+  text-align: center;
+  padding: $spacing-lg;
+  font-weight: $font-weight-bold;
+  border-radius: $border-radius-lg;
+  @include neon-glow-light($muted-color);
+  width: 94%;
+}
+
+.quoters_list_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: $spacing-xl;
+}
+
+.quoter_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-md;
+  cursor: pointer;
+  border-radius: $border-radius-lg;
+  background-color: $panel-color;
+  padding: $spacing-lg;
+  transition: $transition-slow;
+  filter: grayscale(100%);
+  @include neon-glow($accent-color);
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: $accent-color-light;
+    @include neon-glow($text-color);
+    filter: grayscale(0%);
+
+    p {
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+.avatar_img {
+  width: 8.5rem;
+  height: 8.5rem;
+  object-fit: contain;
+  outline: none;
+  border: none;
+  transition: inherit;
+}
+
+// instructions
+
+.button_container {
+  margin-top: $spacing-md;
+}
+.instructions_container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+  width: 40rem;
+
+  p {
+    font-size: $font-size-lg;
+  }
+}

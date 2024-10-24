@@ -1,0 +1,56 @@
+@import "../../../styles/variables";
+
+$modal-background-color: rgba(0, 0, 0, 0.7);
+$modal-content-bg: $panel-color;
+$modal-padding: $spacing-lg;
+$modal-border-radius: $border-radius-lg;
+$modal-close-color: $text-color;
+$modal-z-index: 1000;
+
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $modal-background-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: $modal-z-index;
+}
+
+.modal_container {
+  background-color: $modal-content-bg;
+  padding: $modal-padding;
+  border-radius: $modal-border-radius;
+  position: relative;
+  box-shadow: $box-shadow-lg; // Using the global shadow
+  animation: fadeIn $transition-normal ease-in-out;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.modal_close {
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  color: $modal-close-color;
+}
+
+.modal_content {
+  margin-top: $spacing-md; // Syncing with spacing-md
+}

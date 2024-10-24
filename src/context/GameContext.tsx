@@ -15,6 +15,9 @@ type GameContextType = {
   currentQuote: Quote;
   quotersList: Quoter[];
   roundWinnerIsUser: boolean;
+  correctAnswer: string;
+  isGameStarted: boolean;
+  isGameEnded: boolean;
   handleSelectAnswer: (quoter: string) => void;
   handleToggleActiveQuoters: (targetName: string) => void;
   handleResetGame: () => void;
@@ -31,26 +34,34 @@ export const useGame = () => {
 };
 
 export const GameProvider = ({ children }: GameProviderProps) => {
+  // score
   const [score, setScore] = useState(0);
   const [computerScore, setComputerScore] = useState(0);
+  // quotes:
   const [quotesArray, setQuotesArray] = useState<Quote[]>(quotes);
   const [currentQuote, setCurrentQuote] = useState<Quote>(
     quotes[Math.floor(Math.random() * quotes.length)]
   ); // initialize with a random quote
   const [quotersList, setQuotersList] = useState<Quoter[]>(quoters);
+  // game & round status:
+  const [isGameStarted, setIsGameStarted] = useState(false);
+  const [isGameEnded, setIsGameEnded] = useState(false);
   const [roundWinnerIsUser, setRoundWinnerIsUser] = useState(false);
-
-  // TODO: leverage useMemo where possible to minimize re-renders and optimize
+  const [correctAnswer, setCorrectAnswer] = useState("");
 
   const handleSelectAnswer = (quoter: string) => {
+    if (!isGameStarted) setIsGameStarted(true);
     // if computer wins:
     if (currentQuote.author !== quoter) {
       setRoundWinnerIsUser(false);
+      setCorrectAnswer(currentQuote.author.toString());
       setComputerScore((prev) => prev + 1);
     }
+
     // if  user wins:
     if (currentQuote.author === quoter) {
       setRoundWinnerIsUser(true);
+      setCorrectAnswer("");
       setScore((prev) => prev + 1);
     }
 
@@ -64,6 +75,8 @@ export const GameProvider = ({ children }: GameProviderProps) => {
       setCurrentQuote(nextQuote);
     } else {
       // TODO: end game logic:
+      setIsGameStarted(false);
+      setIsGameEnded(true);
       console.log("Game Over!"); // You can handle game end here
     }
   };
@@ -113,6 +126,7 @@ export const GameProvider = ({ children }: GameProviderProps) => {
   };
 
   const handleResetGame = () => {
+    setIsGameStarted(false);
     setScore(0);
     setComputerScore(0);
     setQuotesArray(quotes);
@@ -126,6 +140,9 @@ export const GameProvider = ({ children }: GameProviderProps) => {
         currentQuote,
         quotersList,
         roundWinnerIsUser,
+        correctAnswer,
+        isGameStarted,
+        isGameEnded,
         handleSelectAnswer,
         handleToggleActiveQuoters,
         handleResetGame,

@@ -1,11 +1,15 @@
 // Colors
-$primary-color: #ff9f43; /* A bright orange for primary elements */
+$primary-color: #ff9f43; // TODO: not currently in use
 $secondary-color: #1abc9c; /* A playful turquoise */
-$accent-color: #e84393; /* A neon pink for accents */
-$background-color: #000000; /* Black background for a sharp contrast */
+$success-color: $secondary-color;
+$error-color: red; //TODO:
+$accent-color: #e84393;
+$neon-accent-color: rgba(255, 70, 155, 0.8);
+$accent-color-light: rgba(232, 67, 147, 0.55);
+$background-color: #000000;
 $panel-color: #1a1a1a;
-$text-color: #f1f1f1; /* Light grey/white for text to pop on black */
-$muted-color: #bdc3c7; /* Softer grey for muted elements */
+$text-color: #f1f1f1;
+$muted-color: #bdc3c7;
 
 // Typography
 $font-family-base: "Arial, sans-serif";
@@ -27,7 +31,7 @@ $spacing-xl: 2rem;
 $border-radius-xsm: 0.1rem;
 $border-radius-sm: 0.25rem;
 $border-radius-md: 0.5rem;
-$border-radius-lg: 0.75rem;
+$border-radius-lg: 1.25rem;
 
 // Shadows
 $box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);

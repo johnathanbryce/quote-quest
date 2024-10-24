@@ -1,6 +1,6 @@
 // layout
-import MainLayout from "./layout/MainLayout";
-import Header from "./layout/Header/Header";
+import MainLayout from "./pages/layout/MainLayout";
+import Header from "./pages/layout/Header/Header";
 // content
 import GamePage from "./pages/GamePage";
 // context

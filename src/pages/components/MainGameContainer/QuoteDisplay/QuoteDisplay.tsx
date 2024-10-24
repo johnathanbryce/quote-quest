@@ -1,5 +1,5 @@
 import styles from "./QuoteDisplay.module.scss";
-import { useGame } from "../../context/GameContext";
+import { useGame } from "../../../../context/GameContext";
 
 const QuoteDisplay = () => {
   const { currentQuote } = useGame();

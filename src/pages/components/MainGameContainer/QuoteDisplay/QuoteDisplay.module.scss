@@ -4,18 +4,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30rem;
+  height: 20rem;
   width: 100%;
 }
 
 .quotes_wrapper {
   position: relative;
-  max-width: 80%;
   text-align: center;
-
-  p {
-    font-size: $font-size-lg;
-  }
 }
 
 blockquote {
@@ -24,21 +19,24 @@ blockquote {
   padding: 2rem;
   margin: 0;
   line-height: 1.6;
+
+  p {
+    font-size: $font-size-xl;
+  }
 }
 
 .opening_quote,
 .closing_quote {
   position: absolute;
-  font-size: 4rem;
-  color: $accent-color;
+  font-size: 3rem;
 }
 
 .opening_quote {
-  top: -1rem;
-  left: -1rem;
+  top: 0rem;
+  left: 0rem;
 }
 
 .closing_quote {
-  top: -1rem;
-  right: -1rem;
+  top: 0rem;
+  right: 0rem;
 }
