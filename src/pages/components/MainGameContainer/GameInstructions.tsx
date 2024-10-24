@@ -10,6 +10,12 @@ const GameInstructions = () => {
         psychic, or maybe just close your eyes and guess. Either way, good luck… it appears you’re
         gonna need it.
       </p>
+      <p>
+        Oh, and if making random guesses is too exhausting for you, there’s even a filter option to
+        narrow down the quoters. You know, in case you need to make this incredibly simple game even
+        simpler.
+      </p>
+      <p>But seriously, just have fun with it. Don’t overthink it, genius! </p>
     </div>
   );
 };
