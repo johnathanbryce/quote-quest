@@ -15,7 +15,7 @@ export const quoters: Quoter[] = [
   },
   {
     id: uuidv4(),
-    name: "Trump",
+    name: "Donald Trump",
     image: trump,
     isActive: true,
   },
