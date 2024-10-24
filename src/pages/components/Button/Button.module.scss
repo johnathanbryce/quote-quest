@@ -1,0 +1,78 @@
+@import "../../../styles/variables";
+
+// Base button styles
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  padding: $spacing-sm $spacing-md;
+  border: none;
+  border-radius: $border-radius-md;
+  cursor: pointer;
+  transition: background-color $transition-fast, box-shadow $transition-fast,
+    transform $transition-fast;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &-disabled {
+    background-color: $muted-color;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+// Variants
+.button-primary {
+  background-color: $muted-color;
+  color: $background-color;
+
+  &:hover {
+    background-color: darken($accent-color-light, 10%);
+    box-shadow: $box-shadow-md;
+  }
+}
+
+.button-secondary {
+  background-color: $secondary-color;
+  color: $background-color;
+
+  &:hover {
+    background-color: lighten($secondary-color, 10%);
+    box-shadow: $box-shadow-md;
+  }
+}
+
+.button-accent {
+  background-color: $accent-color;
+  color: $text-color;
+
+  &:hover {
+    background-color: lighten($accent-color, 10%);
+    box-shadow: $box-shadow-md;
+  }
+}
+
+// Sizes
+.button-sm {
+  font-size: $font-size-sm;
+  padding: $spacing-xs $spacing-sm;
+}
+
+.button-md {
+  font-size: $font-size-base;
+  padding: $spacing-sm $spacing-md;
+}
+
+.button-lg {
+  font-size: $font-size-lg;
+  padding: $spacing-md $spacing-lg;
+}
