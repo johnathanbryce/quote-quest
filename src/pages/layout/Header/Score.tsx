@@ -16,13 +16,8 @@ const Score = ({ score, computerScore, roundWinnerIsUser }: ScoreProps) => {
       >
         Score
       </h3>
-      <p>
-        Quote Quest:{" "}
-        <span className={!roundWinnerIsUser ? styles.computer_wins : ""}>{computerScore}</span>
-      </p>
-      <p>
-        You: <span className={roundWinnerIsUser ? styles.player_wins : ""}>{score}</span>
-      </p>
+      <p className={!roundWinnerIsUser ? styles.computer_wins : ""}>Quote Quest: {computerScore}</p>
+      <p className={roundWinnerIsUser ? styles.player_wins : ""}>You: {score}</p>
     </div>
   );
 };
