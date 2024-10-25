@@ -79,6 +79,7 @@
   place-items: center;
   margin: $spacing-xl 0;
 }
+
 .instructions_container {
   display: flex;
   flex-direction: column;
@@ -87,5 +88,16 @@
 
   p {
     font-size: $font-size-lg;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .instructions_container {
+    gap: $spacing-md;
+    width: auto;
+
+    p {
+      font-size: $font-size-base;
+    }
   }
 }
