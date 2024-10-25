@@ -74,9 +74,10 @@
 
 // instructions
 
-.button_container {
+.buttons_container {
   display: grid;
   place-items: center;
+  gap: $spacing-md;
   margin: $spacing-xl 0;
 }
 
