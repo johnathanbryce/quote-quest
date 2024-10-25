@@ -24,6 +24,7 @@
 
 @media (max-width: $breakpoint-sm) {
   .game_container {
-    margin-top: $spacing-sm;
+    margin-top: $spacing-md;
+    gap: $spacing-lg;
   }
 }

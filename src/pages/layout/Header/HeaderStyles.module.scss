@@ -39,6 +39,11 @@
 }
 
 // logo styles
+
+.inline {
+  display: none;
+}
+
 .logo_container {
   background-color: $background-color;
   padding: $spacing-lg;
@@ -79,7 +84,7 @@
   .header {
     display: flex;
     flex-direction: column;
-    gap: $spacing-lg;
+    gap: $spacing-sm;
   }
 
   .quote_quest_logo {
@@ -91,5 +96,13 @@
     p {
       font-size: $font-size-base;
     }
+  }
+
+  .stacked {
+    display: none;
+  }
+
+  .inline {
+    display: block; // Show inline version on small screens
   }
 }
