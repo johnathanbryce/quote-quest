@@ -57,3 +57,20 @@ blockquote {
     }
   }
 }
+
+@media (max-width: $breakpoint-sm) {
+  .quote_container {
+    height: 10rem;
+  }
+
+  .opening_quote,
+  .closing_quote {
+    font-size: 2rem;
+  }
+
+  blockquote {
+    p {
+      font-size: $font-size-base;
+    }
+  }
+}

@@ -120,13 +120,27 @@
   .quoter_card {
     flex-direction: row;
     justify-content: space-between;
-
     padding: $spacing-sm;
+
+    p {
+      font-size: $font-size-sm;
+    }
   }
 
   .avatar_img {
     width: $icon-size;
     height: $icon-size;
     border-radius: 50%;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .game_header_title {
+    font-size: $font-size-sm;
+  }
+
+  .circle {
+    width: 0.5rem;
+    height: 0.5rem;
   }
 }
