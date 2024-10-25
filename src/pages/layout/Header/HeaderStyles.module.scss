@@ -74,3 +74,22 @@
   margin: 0;
   padding: 0;
 }
+
+@media (max-width: $breakpoint-md) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+
+  .quote_quest_logo {
+    transform: rotate(0);
+  }
+
+  .score_container {
+    justify-content: space-between;
+    p {
+      font-size: $font-size-base;
+    }
+  }
+}
