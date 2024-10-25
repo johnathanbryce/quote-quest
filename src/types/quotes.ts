@@ -10,4 +10,5 @@ export type Quote = {
   quote: string;
   author: string;
   isReal: boolean;
+  imitating?: string;
 };
