@@ -1,4 +1,4 @@
-import styles from "./MainGameContainer.module.scss";
+import styles from "./Settings.module.scss";
 
 const GameInstructions = () => {
   return (

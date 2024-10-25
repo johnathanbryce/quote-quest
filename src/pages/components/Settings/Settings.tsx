@@ -3,6 +3,9 @@ import styles from "./Settings.module.scss";
 // components
 import Panel from "../Panel/Panel";
 import QuoterFilter from "./QuoterFilter";
+import Button from "../Button/Button";
+import Modal from "../Modal/Modal";
+import GameInstructions from "./GameInstructions";
 // icons
 import { IoMdSettings, IoMdClose } from "react-icons/io";
 // third party
@@ -29,12 +32,10 @@ const transitionStyles: Record<TransitionStatus, React.CSSProperties> = {
 
 const Settings = () => {
   const { roundWinnerIsUser, quotersList } = useGame();
-
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleToggleSettings = () => {
-    setIsSettingsOpen((prev) => !prev);
-  };
+  const handleToggleSettings = () => setIsSettingsOpen((prev) => !prev);
 
   return (
     <Panel>
@@ -48,6 +49,12 @@ const Settings = () => {
               }}
             >
               <QuoterFilter quotersList={quotersList} />
+              <div className={styles.button_container}>
+                <Button onClick={() => setIsModalOpen(true)}>How To Play</Button>
+              </div>
+              <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+                <GameInstructions />
+              </Modal>
             </div>
           )}
         </Transition>
