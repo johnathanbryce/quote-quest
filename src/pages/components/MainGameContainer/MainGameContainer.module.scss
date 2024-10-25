@@ -98,19 +98,3 @@
   border: none;
   transition: inherit;
 }
-
-// instructions
-
-.button_container {
-  margin-top: $spacing-md;
-}
-.instructions_container {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-xl;
-  width: 40rem;
-
-  p {
-    font-size: $font-size-lg;
-  }
-}

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./ToggleActiveQuoter.module.scss";
 // context
 import { useGame } from "../../../../context/GameContext";
