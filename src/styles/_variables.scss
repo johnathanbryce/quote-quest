@@ -14,6 +14,7 @@ $muted-color: #bdc3c7;
 // Typography
 $font-family-base: "Arial, sans-serif";
 $font-size-base: 1rem;
+$font-size-xsm: 0.675rem;
 $font-size-sm: 0.875rem;
 $font-size-lg: 1.25rem;
 $font-size-xl: 1.5rem;
@@ -45,3 +46,9 @@ $box-shadow-lg: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 $transition-fast: 0.2s;
 $transition-normal: 0.3s;
 $transition-slow: 0.5s;
+
+$breakpoint-xl: 1450px;
+$breakpoint-lg: 992px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 576px;
+$breakpoint-xsm: 345px;

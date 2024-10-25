@@ -13,3 +13,18 @@
 .flex_container_secondary {
   flex: 0.2;
 }
+
+@media (max-width: $breakpoint-xl) {
+  .game_container {
+    flex-direction: column;
+    gap: $spacing-sm;
+    margin-top: $spacing-lg;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .game_container {
+    margin-top: $spacing-md;
+    gap: $spacing-lg;
+  }
+}

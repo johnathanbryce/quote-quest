@@ -39,6 +39,11 @@
 }
 
 // logo styles
+
+.inline {
+  display: none;
+}
+
 .logo_container {
   background-color: $background-color;
   padding: $spacing-lg;
@@ -73,4 +78,31 @@
   display: block;
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: $breakpoint-md) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
+
+  .quote_quest_logo {
+    transform: rotate(0);
+  }
+
+  .score_container {
+    justify-content: space-between;
+    p {
+      font-size: $font-size-base;
+    }
+  }
+
+  .stacked {
+    display: none;
+  }
+
+  .inline {
+    display: block; // Show inline version on small screens
+  }
 }

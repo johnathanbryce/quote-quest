@@ -23,7 +23,7 @@ const GameHeader = ({ isGameStarted, roundWinnerIsUser, correctAnswer }: GameHea
           ? "Quote Quest" // initial page load / reset game
           : roundWinnerIsUser
           ? `${randomCorrectAnswerHeader}` // when user wins
-          : `The correct answer was ${correctAnswer}`}
+          : `Correct Answer: ${correctAnswer}`}
       </h2>
       <div className={styles.circle}></div>
     </div>
