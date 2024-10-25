@@ -92,6 +92,8 @@ export const GameProvider = ({ children }: GameProviderProps) => {
     // find the target quoter
     const targetQuoter = quotersList.find((quoter) => quoter.name === targetName);
 
+    console.log(targetQuoter);
+
     if (targetQuoter) {
       // ensure at least 2 active quoters
       if (targetQuoter.isActive && activeQuotersCount <= MIN_ACTIVE_QUOTERS) {
@@ -112,8 +114,19 @@ export const GameProvider = ({ children }: GameProviderProps) => {
     const updatedActiveQuoters = updatedQuotersList.filter((quoter) => quoter.isActive);
     const activeQuotersNames = updatedActiveQuoters.map((quoter) => quoter.name);
 
-    // update the quotes array based on active quoters
-    const updatedQuotesList = quotes.filter((quote) => activeQuotersNames.includes(quote.author));
+    console.log(activeQuotersNames);
+
+    // step 1: update the quotes array based on active quoters
+    const updatedQuotesListNamesRemoved = quotes.filter((quote) =>
+      activeQuotersNames.includes(quote.author)
+    );
+
+    // step 2: filter to remove AI quotes imitating the targetName
+    const updatedQuotesList = updatedQuotesListNamesRemoved.filter(
+      (quote) => quote.imitating !== targetName
+    );
+
+    // Set the updated quotes array
     setQuotesArray(updatedQuotesList);
 
     // ensure there's at least one quote before updating the current quote
