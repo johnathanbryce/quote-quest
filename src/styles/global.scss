@@ -12,6 +12,12 @@
   padding: 1rem 1rem;
 }
 
+@media (max-width: $breakpoint-md) {
+  .main_layout {
+    height: auto;
+  }
+}
+
 *,
 *::before,
 *::after {

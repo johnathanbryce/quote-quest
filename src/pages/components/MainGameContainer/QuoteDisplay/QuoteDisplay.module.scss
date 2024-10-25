@@ -40,3 +40,20 @@ blockquote {
   top: 0rem;
   right: 0rem;
 }
+
+@media (max-width: $breakpoint-md) {
+  .quote_container {
+    height: 12.5rem;
+  }
+
+  .opening_quote,
+  .closing_quote {
+    font-size: 2rem;
+  }
+
+  blockquote {
+    p {
+      font-size: $font-size-base;
+    }
+  }
+}
