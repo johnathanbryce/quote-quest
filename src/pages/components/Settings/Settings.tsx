@@ -6,6 +6,7 @@ import QuoterFilter from "./QuoterFilter";
 import Button from "../Button/Button";
 import Modal from "../Modal/Modal";
 import GameInstructions from "./GameInstructions";
+import ResetGame from "./ResetGame";
 // icons
 import { IoMdSettings, IoMdClose } from "react-icons/io";
 // third party
@@ -31,7 +32,7 @@ const transitionStyles: Record<TransitionStatus, React.CSSProperties> = {
 };
 
 const Settings = () => {
-  const { roundWinnerIsUser, quotersList } = useGame();
+  const { roundWinnerIsUser, quotersList, handleResetGame } = useGame();
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -49,7 +50,9 @@ const Settings = () => {
               }}
             >
               <QuoterFilter quotersList={quotersList} />
-              <div className={styles.button_container}>
+
+              <div className={styles.buttons_container}>
+                <ResetGame handleResetGame={handleResetGame} />
                 <Button onClick={() => setIsModalOpen(true)}>How To Play</Button>
               </div>
               <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
