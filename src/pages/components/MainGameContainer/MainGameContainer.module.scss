@@ -109,6 +109,7 @@
   }
 
   .quoters_list_header {
+    padding: $spacing-sm;
     width: 100%;
   }
 
@@ -135,8 +136,10 @@
 }
 
 @media (max-width: $breakpoint-sm) {
-  .game_header_title {
+  .game_header_title,
+  .quoters_list_header {
     font-size: $font-size-sm;
+    padding: $spacing-sm;
   }
 
   .circle {

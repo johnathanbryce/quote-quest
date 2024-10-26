@@ -106,3 +106,14 @@
     display: block; // Show inline version on small screens
   }
 }
+
+@media (max-width: $breakpoint-sm) {
+  .header {
+    gap: 0;
+  }
+
+  .logo_container {
+    padding: $spacing-sm;
+    margin-bottom: $spacing-sm;
+  }
+}
