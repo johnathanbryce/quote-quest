@@ -28,4 +28,8 @@
     gap: $spacing-lg;
     margin-top: 0;
   }
+
+  .flex_container_secondary:nth-child(3) {
+    margin-bottom: $spacing-xl;
+  }
 }

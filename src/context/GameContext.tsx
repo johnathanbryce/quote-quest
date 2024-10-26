@@ -92,8 +92,6 @@ export const GameProvider = ({ children }: GameProviderProps) => {
     // find the target quoter
     const targetQuoter = quotersList.find((quoter) => quoter.name === targetName);
 
-    console.log(targetQuoter);
-
     if (targetQuoter) {
       // ensure at least 2 active quoters
       if (targetQuoter.isActive && activeQuotersCount <= MIN_ACTIVE_QUOTERS) {
@@ -113,8 +111,6 @@ export const GameProvider = ({ children }: GameProviderProps) => {
     // update the list of active quoters using the updated list
     const updatedActiveQuoters = updatedQuotersList.filter((quoter) => quoter.isActive);
     const activeQuotersNames = updatedActiveQuoters.map((quoter) => quoter.name);
-
-    console.log(activeQuotersNames);
 
     // step 1: update the quotes array based on active quoters
     const updatedQuotesListNamesRemoved = quotes.filter((quote) =>
@@ -140,9 +136,14 @@ export const GameProvider = ({ children }: GameProviderProps) => {
 
   const handleResetGame = () => {
     setIsGameStarted(false);
+    setIsGameEnded(false);
     setScore(0);
     setComputerScore(0);
     setQuotesArray(quotes);
+    setCurrentQuote(quotes[Math.floor(Math.random() * quotes.length)]);
+    setQuotersList(quoters);
+    setRoundWinnerIsUser(false);
+    setCorrectAnswer("");
   };
 
   return (
