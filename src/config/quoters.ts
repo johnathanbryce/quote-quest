@@ -9,7 +9,7 @@ import ai from "../assets/ai.jpg";
 export const quoters: Quoter[] = [
   {
     id: uuidv4(),
-    name: "AI",
+    name: "AI-Generated",
     image: ai,
     isActive: true,
   },
